@@ -1,6 +1,6 @@
 etch();
     function etch() {
-    let squareSide = Math.min(prompt('Generating an x by x grid. Please enter desired x'), 100);
+    let squareSide = Math.min(prompt('Generating an x by x grid. Please enter desired x') || 16, 100);
     const gridContainer = document.querySelector('.grid-container');
     generateGrid(squareSide);
 
