@@ -1,4 +1,4 @@
-let squareSide = 16;
+let squareSide = 100;
 let gridContainer = document.querySelector('.grid-container');
 let resetButton = document.querySelector('#reset-button');
 
@@ -10,6 +10,13 @@ for (let i = 1; i <= squareSide * squareSide; i++) {
     div.style.borderWidth = '1px';
     div.style.borderStyle = 'solid';
     div.style.boxSizing = 'border-box';
-    div.setAttribute('id', `pixel${i}`);
+    div.setAttribute('id', `pixel`);
     gridContainer.appendChild(div);
 }
+
+const pixels = document.querySelectorAll('#pixel');
+pixels.forEach((pixel) => {
+    pixel.addEventListener('mouseover', () => {
+        pixel.setAttribute('class', 'highlight');
+    })
+})
