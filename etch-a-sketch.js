@@ -1,6 +1,6 @@
-etch();
-    function etch() {
-    let squareSide = Math.min(prompt('Generating an x by x grid. Please enter desired x') || 16, 100);
+etch(16);
+    function etch(squareSide) {
+    
     const gridContainer = document.querySelector('.grid-container');
     generateGrid(squareSide);
 
@@ -34,7 +34,7 @@ etch();
         pixels.forEach((pixel) => {
             gridContainer.removeChild(pixel);
         })
-        etch();
+        etch(Math.min(prompt('Generating an x by x grid. Please enter desired x') || 16, 100));
     })
     const clearButton = document.querySelector('#clear-button');
     clearButton.addEventListener('click', () => {
