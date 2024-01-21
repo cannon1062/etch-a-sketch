@@ -11,6 +11,11 @@
     flex-wrap: wrap;
 }
 
+#pixel {
+    border: 1px solid rgb(233, 232, 232);
+    box-sizing: border-box;
+}
+
 .highlight {
     background-color: blue;
 }
