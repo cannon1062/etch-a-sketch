@@ -1,0 +1,12 @@
+* {
+    text-align: center;
+}
+
+.grid-container {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    border: 2px solid red;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
