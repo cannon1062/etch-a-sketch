@@ -1,4 +1,6 @@
-let squareSide = 100;
+etch();
+function etch() {
+let squareSide = Math.min(prompt('Generating an x by x grid. Please enter desired x'), 100);
 const gridContainer = document.querySelector('.grid-container');
 generateGrid(squareSide);
 
@@ -13,9 +15,14 @@ function generateGrid(squareSide) {
 }
 
 const pixels = document.querySelectorAll('#pixel');
+bold = 10;
 pixels.forEach((pixel) => {
     pixel.addEventListener('mouseover', () => {
-        pixel.setAttribute('class', 'highlight');
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+        bold += 10;
+        pixel.style.backgroundColor = `rgb(${r}, ${g}, ${b}, ${bold}%`;
     })
 })
 
@@ -24,6 +31,6 @@ resetButton.addEventListener('click', () => {
     pixels.forEach((pixel) => {
         gridContainer.removeChild(pixel);
     })
-    squareSide = prompt('Generating an x by x grid. Enter desired x');
-    generateGrid(squareSide);
+    etch();
 })
+}
