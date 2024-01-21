@@ -21,8 +21,11 @@ pixels.forEach((pixel) => {
         let r = Math.floor(Math.random() * 255);
         let g = Math.floor(Math.random() * 255);
         let b = Math.floor(Math.random() * 255);
-        bold += 10;
-        pixel.style.backgroundColor = `rgb(${r}, ${g}, ${b}, ${bold}%`;
+        value = +pixel.getAttribute('value');
+        value += bold;
+        pixel.setAttribute('value', value);
+        console.log(value);
+        pixel.style.backgroundColor = `rgb(${r}, ${g}, ${b}, ${value}%`;
     })
 })
 
