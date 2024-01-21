@@ -29,8 +29,8 @@ etch(16);
         })
     })
 
-    const resetButton = document.querySelector('#reset-button');
-    resetButton.addEventListener('click', () => {
+    const generateButton = document.querySelector('#generate-button');
+    generateButton.addEventListener('click', () => {
         pixels.forEach((pixel) => {
             gridContainer.removeChild(pixel);
         })
