@@ -40,6 +40,7 @@ etch(16);
     clearButton.addEventListener('click', () => {
         pixels.forEach((pixel) => {
             pixel.style.backgroundColor = 'white';
+            pixel.setAttribute('value', 0);
         })
     })
 }
